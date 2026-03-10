@@ -14,14 +14,6 @@ if(isset($_POST['hobbies'])){
 
 
 
-$targetDir = "uploads/";
-$imageName = $_FILES['image']['name'];
-$tempName = $_FILES['image']['tmp_name'];
-
-$targetFile = $targetDir . basename($imageName);
-
-move_uploaded_file($tempName, $targetFile);
-
 ?>
 
 <!DOCTYPE html>
@@ -44,22 +36,11 @@ body{
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(112, 112, 112, 0.2);
 }
 
 h1{
     text-align: center;
     color: #aa8686;
-}
-
-.profile-img{
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #050507;
 }
 
 .info{
